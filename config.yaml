@@ -1,0 +1,79 @@
+# Adam The Woo - On This Day Configuration
+
+# Channel Information
+channel:
+  handle: "@TheDailyWoo"
+  name: "Adam The Woo"
+  
+# Playlist Configuration
+playlist:
+  title_format: "Adam The Woo - On This Day: {month} {day}"
+  description_format: |
+    On this day in years past, Adam shared these adventures with us.
+    
+    This is an automated memorial playlist celebrating Adam's legacy.
+    Project: https://github.com/yourusername/adam-the-woo-on-this-day
+  
+  # Maximum videos per playlist (YouTube limit is 5000)
+  max_videos: 200
+
+# Reddit Configuration
+reddit:
+  subreddit: "Adamthewoo"
+  post_title_format: "On This Day - {month} {day} - Adam The Woo's Adventures"
+  post_template: |
+    On {month} {day}, Adam shared these memories with us:
+    
+    {video_list}
+    
+    **Watch today's playlist:** {playlist_url}
+    
+    ---
+    
+    *This is an automated memorial project celebrating Adam's legacy.*  
+    *Learn more: [GitHub](https://github.com/yourusername/adam-the-woo-on-this-day)*
+  
+  # Flair (if subreddit has flair)
+  flair_text: "Memorial Project"
+
+# Date Parsing
+date_parsing:
+  # Common date formats in video titles
+  title_patterns:
+    - '%m/%d/%Y'  # 01/04/2015
+    - '%m-%d-%Y'  # 01-04-2015
+    - '%Y-%m-%d'  # 2015-01-04
+    - '%B %d, %Y' # January 4, 2015
+    - '%b %d, %Y' # Jan 4, 2015
+  
+  # Fallback to upload date if no date found in title
+  use_upload_date_fallback: true
+  
+  # Timezone for date interpretation
+  timezone: "America/New_York"
+
+# Scheduling
+schedule:
+  # Time to run daily update (24-hour format)
+  hour: 10
+  minute: 0
+  timezone: "UTC"
+
+# Features
+features:
+  # Create YouTube playlist
+  create_playlist: true
+  
+  # Post to Reddit
+  post_to_reddit: true
+  
+  # Future: Post to Twitter/X
+  post_to_twitter: false
+  
+  # Dry run mode (test without actually posting)
+  dry_run: false
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "adam_the_woo_memorial.log"
