@@ -1,0 +1,19 @@
+# YouTube API
+google-api-python-client==2.108.0
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+
+# Reddit API
+praw==7.7.1
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+requests==2.31.0
+
+# Date/Time handling
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Data handling
+jsonschema==4.20.0
