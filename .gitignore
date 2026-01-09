@@ -1,0 +1,37 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.dll
+*.exe
+*.pdb
+*.DotSettings
+
+# Environment
+.env
+.env.local
+
+# Data
+data/
+*.json.backup
+
+# Logs
+*.log
+
+# OAuth tokens
+token.json
+token.pickle
+
+# IDE
+.vscode/
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
